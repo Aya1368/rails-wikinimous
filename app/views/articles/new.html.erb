@@ -1,0 +1,15 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Wikinimous</span>
+    <span><%= link_to 'Create a new article', new_article_path %></span>
+  </div>
+</nav>
+<div class="container" style="text-align: center; margin-top: 20px; ">
+  <h1>Add an Article</h1>
+  <%= simple_form_for @article do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+</div>
+

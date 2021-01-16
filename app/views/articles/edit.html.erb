@@ -1,0 +1,19 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Wikinimous</span>
+    <span><%= link_to 'Create a new article', new_article_path %></span>
+  </div>
+</nav>
+<div class="container" style="text-align: center; margin-top: 20px;">
+<h1>Edit Article</h1>
+  <%= simple_form_for @article do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.submit %>
+  <% end %>
+  <%= link_to "Delete article", article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %>
+  <hr>
+    <i class="bi bi-pencil-fill"><%= link_to 'back', articles_path %></i>
+
+</div>
+</div>

@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Wikinimous</span>
+    <span><%= link_to 'Create a new article', new_article_path %></span>
+  </div>
+</nav>
+<div class="container" style="text-align: center; margin-top: 20px;">
+    <h1><%= @article.title%></h1>
+    <p><%= @article.content %></p>
+   <button class="btn btn-outline-success" type="submit"><%= link_to 'Edit Article', edit_article_path(@article) %></button>
+<hr>
+    <i class="bi bi-pencil-fill"><%= link_to 'back', articles_path %></i>
+
+</div>
